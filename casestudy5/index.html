@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRU Student Dashboard - Roll No: 60</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Malla Reddy University</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#timetable">Timetable</a></li>
+                <li class="nav-item"><a class="nav-link" href="#exams">Exams</a></li>
+                <li class="nav-item"><span class="badge bg-warning text-dark mt-2 ms-lg-2">Roll No: 60</span></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container my-4">
+
+    <!-- Alert Banner -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Fee Reminder:</strong> Semester tuition & exam fee due date is approaching. Pay online to avoid late penalty.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!-- Carousel -->
+    <div id="campusCarousel" class="carousel slide mb-4 rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active bg-dark text-white p-5 text-center">
+                <h4>Welcome, Roll Number 60 (I B.Tech R-26)</h4>
+                <p class="mb-0">Centralized Academic & Student Services Dashboard</p>
+            </div>
+            <div class="carousel-item bg-secondary text-white p-5 text-center">
+                <h4>Academic Notification: Minor-2 Examinations</h4>
+                <p class="mb-0">Hall tickets are available for download under the Exam Schedule section.</p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#campusCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#campusCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Grid System & Cards -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-4">
+            <div class="card border-success shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Overall Attendance</h5>
+                    <h2 class="display-6 fw-bold">84.5%</h2>
+                    <p class="card-text text-muted">Status: Eligible for Endterm Exams</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-primary shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Fee Status</h5>
+                    <h2 class="display-6 fw-bold">₹0 Due</h2>
+                    <p class="card-text text-muted">Tuition Fee Paid | Exam Fee Pending</p>
+                    <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#feeModal">Pay Exam Fee</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-danger shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Quick Student Services</h5>
+                    <p class="card-text">Apply for Leave, Bonafide, or Library Book Renewal.</p>
+                    <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#serviceModal">Open Services</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tables (Timetable & Exam Schedule) -->
+    <div class="row g-4" id="timetable">
+        <div class="col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white">Today's Timetable (I B.Tech - Roll 60)</div>
+                <div class="card-body p-0">
+                    <table class="table table-striped mb-0">
+                        <thead>
+                            <tr><th>Time</th><th>Subject</th><th>Room</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>09:30 AM</td><td>Web Technologies</td><td>Block A - 204</td></tr>
+                            <tr><td>11:15 AM</td><td>Data Structures</td><td>Block A - 204</td></tr>
+                            <tr><td>02:00 PM</td><td>WT Lab (Batch B)</td><td>CSE Lab 3</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6" id="exams">
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white">Upcoming Examination Schedule</div>
+                <div class="card-body p-0">
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                            <tr><th>Date</th><th>Exam</th><th>Subject</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>02 Dec 2026</td><td>Minor-2</td><td>Programming for Problem Solving</td></tr>
+                            <tr><td>04 Dec 2026</td><td>Minor-2</td><td>Web Design & Development</td></tr>
+                            <tr><td>18 Dec 2026</td><td>Endterm</td><td>Theory Examinations Begin</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fee Payment Modal -->
+<div class="modal fade" id="feeModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Exam Fee Payment - Roll No: 60</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Student Roll Number:</strong> 60</p>
+                <p><strong>Examination Fee:</strong> ₹1,500</p>
+                <div class="alert alert-info mb-0">Redirecting to MRU Payment Gateway...</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirm Payment</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Student Service Modal -->
+<div class="modal fade" id="serviceModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Quick Service Request (Roll No: 60)</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <select class="form-select mb-3">
+                    <option>Request Bonafide Certificate</option>
+                    <option>Apply Medical Leave</option>
+                    <option>Transport Bus Pass Renewal</option>
+                </select>
+                <textarea class="form-control" rows="3" placeholder="Enter remarks..."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Submit Request</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

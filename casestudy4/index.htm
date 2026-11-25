@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Service Portal</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            color: blue;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: blue;
+            color: white;
+            border: none;
+        }
+
+        #result {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Service Portal</h2>
+
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Student Name" required>
+
+        <input type="text" id="roll" placeholder="Roll Number" required>
+
+        <select id="service" required>
+            <option value="">Select Service</option>
+            <option>Leave Request</option>
+            <option>Bonafide Certificate</option>
+            <option>Course Registration</option>
+        </select>
+
+        <textarea id="details" placeholder="Enter Details" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    let requests = [];
+
+    function submitForm(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let roll = document.getElementById("roll").value;
+        let service = document.getElementById("service").value;
+        let details = document.getElementById("details").value;
+
+        let request = {
+            name, roll, service, details
+        };
+
+        requests.push(request);
+
+        document.getElementById("result").innerHTML =
+            "Request Submitted Successfully!<br>" +
+            "Name: " + name + "<br>" +
+            "Roll No: " + roll + "<br>" +
+            "Service: " + service;
+
+        document.getElementById("myForm").reset();
+    }
+
+    document.getElementById("myForm").addEventListener("submit", submitForm);
+</script>
+
+</body>
+</html>

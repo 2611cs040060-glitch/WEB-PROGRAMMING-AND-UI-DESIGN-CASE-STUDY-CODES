@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRU Student Services - Roll No: 60</title>
+    <style>
+        :root {
+            --primary: #7a1c1c;
+            --secondary: #f39c12;
+            --bg: #f0f2f5;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), #4a0e0e);
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .badge { background: var(--secondary); color: #000; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            border-top-color: var(--secondary);
+        }
+        .card h3 { color: var(--primary); margin-bottom: 0.8rem; font-size: 1.3rem; }
+        .card p { font-size: 0.95rem; color: #555; margin-bottom: 1.2rem; }
+        .btn {
+            display: inline-block;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: var(--secondary); color: #000; }
+
+        footer { text-align: center; padding: 1.5rem; background: #222; color: #ccc; margin-top: 3rem; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Malla Reddy University - Student Services</h1>
+    <p>One-Stop Digital Campus Portal &nbsp;|&nbsp; <span class="badge">Roll No: 60</span></p>
+</header>
+
+<div class="container">
+    <div class="services-grid">
+        <div class="card">
+            <div>
+                <h3>Central Library</h3>
+                <p>Access digital journals, e-books, OPAC catalog search, and book renewal timings (8:00 AM – 8:00 PM).</p>
+            </div>
+            <a href="#" class="btn">Access E-Library</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h3>University Transport</h3>
+                <p>View live bus routes across Hyderabad, pass renewal status, and transport coordinator contacts.</p>
+            </div>
+            <a href="#" class="btn">View Bus Routes</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h3>Campus Hostels</h3>
+                <p>Check boys & girls hostel room allotment, mess menu, wardens' directory, and maintenance requests.</p>
+            </div>
+            <a href="#" class="btn">Hostel Portal</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h3>Training & Placements</h3>
+                <p>Track upcoming campus recruitment drives, CRT training schedules, and internship opportunities.</p>
+            </div>
+            <a href="#" class="btn">Placement Cell</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <h3>Examination Branch</h3>
+                <p>Download Minor-1, Minor-2, and Endterm schedules, seating plans, and semester grade cards.</p>
+            </div>
+            <a href="#" class="btn">Exam Updates</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Malla Reddy University (MRU) | Designed by Roll Number: 60</p>
+</footer>
+
+</body>
+</html>
